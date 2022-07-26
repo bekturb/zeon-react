@@ -1,0 +1,1 @@
+const baseUrl = `https://6253ee2319bc53e234758b47.mockapi.io/api/todo-react/v1/dateEvents`
