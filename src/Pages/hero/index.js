@@ -73,7 +73,7 @@ const Hero = () => {
 
         return (
         <section>
-            <button onClick={() => setModalOpen(true)}>Add Event</button>
+            <button className='add__event' onClick={() => setModalOpen(true)}>Add Event</button>
             <div style={{position: 'relative', zIndex: 0}}>
                 <FullCalendar
                     events={events}

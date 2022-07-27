@@ -25,18 +25,20 @@ function ModalWindow({isOpen, onClose,onEventAdded}) {
     return (
         <Modal isOpen={isOpen} onRequestClose={onClose}>
             <form onSubmit={onSubmit} action="">
-                <input type="text" placeholder='Title' onChange={e => setTitle(e.target.value)}/>
+                <div className='modal__inner'>
+                    <input className='input' type="text" placeholder='Title' onChange={e => setTitle(e.target.value)}/>
 
-                <div>
-                    <label>Start date</label>
-                    <Datetime value={start} onChange={date => setStart(date)}/>
-                </div>
-                <div>
-                    <label>End date</label>
-                    <Datetime value={end} onChange={date => setEnd(date)}/>
-                </div>
+                    <div>
+                        <label>Start date</label>
+                        <Datetime className='date--time' value={start} onChange={date => setStart(date)}/>
+                    </div>
+                    <div>
+                        <label>End date</label>
+                        <Datetime value={end} onChange={date => setEnd(date)}/>
+                    </div>
 
-                <button>Add Event</button>
+                    <button className='btn'>Add Event</button>
+                </div>
             </form>
         </Modal>
     );
